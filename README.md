@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Otti - Optimisation de Projets par IA
 
-## Getting Started
+Otti est une plateforme SaaS innovante qui utilise l'intelligence artificielle pour optimiser la gestion de vos projets. Notre solution analyse automatiquement vos briefs et calcule instantanément les besoins en ressources, effectifs et budget pour une gestion de projet optimale.
 
-First, run the development server:
+## 🌟 Fonctionnalités Principales
+
+- **Analyse IA Intelligente** : Notre agent IA analyse votre brief pour comprendre vos besoins et contraintes
+- **Calcul d'Effectifs Précis** : Estimation précise du nombre de personnes nécessaires pour votre projet
+- **Budget Intelligent** : Calcul automatique des coûts basé sur les meilleures pratiques du marché
+- **Recommandations Personnalisées** : Suggestions adaptées pour optimiser votre projet
+
+## 🚀 Démarrage Rapide
+
+### Prérequis
+
+- Node.js 18.x ou supérieur
+- npm ou yarn
+- Un compte GitHub
+
+### Installation
+
+1. Clonez le repository :
+
+```bash
+git clone https://github.com/votre-username/otti.git
+cd otti
+```
+
+2. Installez les dépendances :
+
+```bash
+npm install
+# ou
+yarn install
+```
+
+3. Configurez les variables d'environnement :
+
+```bash
+cp .env.example .env.local
+```
+
+4. Lancez le serveur de développement :
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+L'application sera accessible à l'adresse [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Technologies Utilisées
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend** :
 
-## Learn More
+  - Next.js 14
+  - React
+  - Tailwind CSS
+  - Framer Motion
+  - TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+- **Backend** :
+  - Node.js
+  - Prisma
+  - PostgreSQL
+  - OpenAI API
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Structure du Projet
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+otti/
+├── src/
+│   ├── app/              # Routes et pages de l'application
+│   ├── components/       # Composants React réutilisables
+│   ├── lib/             # Utilitaires et configurations
+│   └── styles/          # Styles globaux
+├── public/              # Assets statiques
+└── prisma/             # Schéma de base de données
+```
 
-## Deploy on Vercel
+## 🔧 Configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Variables d'Environnement
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Créez un fichier `.env.local` à la racine du projet avec les variables suivantes :
+
+```env
+DATABASE_URL="postgresql://user:password@localhost:5432/otti"
+NEXT_PUBLIC_API_URL="http://localhost:3000/api"
+OPENAI_API_KEY="votre-clé-api"
+```
+
+## 🚀 Déploiement
+
+1. Construisez l'application :
+
+```bash
+npm run build
+# ou
+yarn build
+```
+
+2. Démarrez le serveur de production :
+
+```bash
+npm start
+# ou
+yarn start
+```
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! Voici comment contribuer :
+
+1. Fork le projet
+2. Créez votre branche de fonctionnalité (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Push vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
+
+## 📝 Licence
+
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+
+## 📞 Support
+
+Pour toute question ou assistance :
+
+- Email : support@otti.com
+- Twitter : [@OttiApp](https://twitter.com/OttiApp)
+- Documentation : [docs.otti.com](https://docs.otti.com)
+
+## 🙏 Remerciements
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [OpenAI](https://openai.com/)
