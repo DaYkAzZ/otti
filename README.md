@@ -8,6 +8,7 @@ Otti est une plateforme SaaS innovante qui utilise l'intelligence artificielle p
 - **Calcul d'Effectifs Précis** : Estimation précise du nombre de personnes nécessaires pour votre projet
 - **Budget Intelligent** : Calcul automatique des coûts basé sur les meilleures pratiques du marché
 - **Recommandations Personnalisées** : Suggestions adaptées pour optimiser votre projet
+- **Authentification Sécurisée** : Connexion simple et sécurisée via Google OAuth2
 
 ## 🚀 Démarrage Rapide
 
@@ -16,6 +17,7 @@ Otti est une plateforme SaaS innovante qui utilise l'intelligence artificielle p
 - Node.js 18.x ou supérieur
 - npm ou yarn
 - Un compte GitHub
+- Un projet Google Cloud Platform (pour OAuth2)
 
 ### Installation
 
@@ -40,7 +42,15 @@ yarn install
 cp .env.example .env.local
 ```
 
-4. Lancez le serveur de développement :
+4. Configurez l'authentification Google :
+
+   - Créez un projet sur [Google Cloud Console](https://console.cloud.google.com)
+   - Activez l'API Google+ API
+   - Créez des identifiants OAuth2
+   - Ajoutez les URLs de redirection autorisées
+   - Copiez le Client ID et le Client Secret dans votre `.env.local`
+
+5. Lancez le serveur de développement :
 
 ```bash
 npm run dev
@@ -65,6 +75,7 @@ L'application sera accessible à l'adresse [http://localhost:3000](http://localh
   - Prisma
   - PostgreSQL
   - OpenAI API
+  - NextAuth.js (Auth.js)
 
 ## 📦 Structure du Projet
 
@@ -72,8 +83,11 @@ L'application sera accessible à l'adresse [http://localhost:3000](http://localh
 otti/
 ├── src/
 │   ├── app/              # Routes et pages de l'application
+│   │   ├── api/         # API routes
+│   │   │   └── auth/    # Routes d'authentification
 │   ├── components/       # Composants React réutilisables
 │   ├── lib/             # Utilitaires et configurations
+│   │   └── auth.ts      # Configuration NextAuth
 │   └── styles/          # Styles globaux
 ├── public/              # Assets statiques
 └── prisma/             # Schéma de base de données
@@ -89,6 +103,12 @@ Créez un fichier `.env.local` à la racine du projet avec les variables suivant
 DATABASE_URL="postgresql://user:password@localhost:5432/otti"
 NEXT_PUBLIC_API_URL="http://localhost:3000/api"
 OPENAI_API_KEY="votre-clé-api"
+
+# Authentication
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="votre-secret-nextauth"
+GOOGLE_CLIENT_ID="votre-client-id"
+GOOGLE_CLIENT_SECRET="votre-client-secret"
 ```
 
 ## 🚀 Déploiement
