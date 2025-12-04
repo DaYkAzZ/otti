@@ -5,10 +5,10 @@ import Features from "@/components/ui/home/Features";
 import HowItWorks from "@/components/ui/home/HowItWorks";
 import Pricing from "@/components/ui/home/Pricing";
 import CTA from "@/components/ui/home/CTA";
-
+import Footer from "@/components/navigation/Footer";
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#00150b] to-[#000d1c]">
+    <div className="min-h-screen bg-[#000d1c]">
       <Header />
       <main>
         <Hero />
@@ -17,6 +17,7 @@ export default function Home() {
         <Pricing />
         <CTA />
       </main>
+      <Footer />
     </div>
   );
 }

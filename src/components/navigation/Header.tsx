@@ -73,7 +73,7 @@ export default function Header() {
                 transition={{ duration: 0.5, delay: navItems.length * 0.1 }}
               >
                 <Link
-                  href="/login"
+                  href="/pages/login"
                   className="text-gray-300 hover:text-white transition-colors text-base font-medium"
                 >
                   Connexion

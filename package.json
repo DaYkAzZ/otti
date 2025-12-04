@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@auth/prisma-adapter": "^2.9.0",
+    "@auth/prisma-adapter": "^2.9.1",
     "@heroicons/react": "^2.2.0",
     "@prisma/client": "^6.7.0",
     "framer-motion": "^12.9.7",
     "next": "15.3.1",
+    "next-auth": "^5.0.0-beta.28",
+    "postgresql": "^0.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
